@@ -12,4 +12,12 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
   color: #fff;
+  overflow-x: hidden;
+}
+button:focus {
+  outline: none;
+}
+
+.gradient{
+  background-color: linear-gradient(90deg,rgba(58, 150, 208, 1) 0%,rgba(174, 205, 225, 1) 100%)
 }

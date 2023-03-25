@@ -40,6 +40,10 @@ export const data = [
     title: "Samarkand",
   },
   {
+    id: 12,
+    title: "Urgench",
+  },
+  {
     id: 13,
     title: "Karakalpakstan",
   },
