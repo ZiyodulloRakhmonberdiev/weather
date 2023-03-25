@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Searchbar from "../../Components/Searchbar/app";
-import { data } from "../../Dummy/data";
+import { data } from "../../dummy/data";
 import {
   Container,
   Content,
