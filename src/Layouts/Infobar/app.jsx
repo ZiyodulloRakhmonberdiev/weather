@@ -11,7 +11,7 @@ const App = ({ weather, loading, error }) => {
         </div>
         <div className="city__wrapper">
           <div className="city__name">
-            <h4>{weather?.name || "Search city"}</h4>
+            <h4>{weather?.name || "This city was not found"}</h4>
             <p>{moment().format("MMMM Do YYYY")}</p>
           </div>
           <div className="city__img">
