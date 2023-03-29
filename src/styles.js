@@ -8,7 +8,7 @@ export const AppContainer = styled.div`
   position: relative;
   background: rgb(58, 150, 208);
   background-repeat: no-repeat !important;
-  background-size: contain !important;
+  background-size: cover !important;
   background: linear-gradient(
     90deg,
     rgba(58, 150, 208, 1) 0%,
