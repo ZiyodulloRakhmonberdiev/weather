@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Searchbar from "../../Components/Searchbar/app";
 import { useDispatch } from "react-redux";
 import { data } from "../../dummy/data";
@@ -13,12 +12,11 @@ import {
 } from "./styles";
 import { fetchedWeather } from "../../Redux/slices/weatherSlices";
 
-const App = ({ weather }) => {
-  const [cityName, setCityName] = useState("");
+const App = ({ weather, cityName, setCityName, setRegion }) => {
   const dispatch = useDispatch();
-
   const handleCity = (cityName) => {
     dispatch(fetchedWeather(cityName));
+    setRegion(cityName?.toLowerCase());
   };
   // function getCachedData(func) {
   //   let cache = new Map();
@@ -35,13 +33,17 @@ const App = ({ weather }) => {
   return (
     <Container>
       <Content>
-        <Searchbar cityName={cityName} setCityName={setCityName} />
+        <Searchbar
+          cityName={cityName}
+          setCityName={setCityName}
+          setRegion={setRegion}
+        />
         <CitiesList>
           {data?.map((city) => (
             <CitiesItem
               key={city?.id}
               onClick={() => {
-                setCityName(city?.title);
+                setCityName(city?.title.toLowerCase());
                 handleCity(city?.title);
               }}
             >

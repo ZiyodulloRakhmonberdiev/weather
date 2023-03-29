@@ -20,8 +20,12 @@ export const data = [
     title: "Jizzakh",
   },
   {
+    id: 6,
+    title: "Termez",
+  },
+  {
     id: 7,
-    title: "Navai",
+    title: "Navoiy",
   },
   {
     id: 8,

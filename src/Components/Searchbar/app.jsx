@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { fetchedWeather } from "../../Redux/slices/weatherSlices";
 import { Form, Input, Button } from "./styles";
 
-const App = ({ cityName, setCityName }) => {
-  const state = useSelector((state) => state);
-  const { weather, loading, error } = state;
+const App = ({ cityName, setCityName, setRegion }) => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchedWeather(cityName || "Tashkent"));
-  }, []);
+  }, [dispatch]);
   return (
     <Form
       onSubmit={(e) => {
         e.preventDefault();
         dispatch(fetchedWeather(cityName));
+        setRegion(cityName);
       }}
     >
       <Input

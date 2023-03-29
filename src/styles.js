@@ -7,6 +7,8 @@ export const AppContainer = styled.div`
   justify-content: space-between;
   position: relative;
   background: rgb(58, 150, 208);
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
   background: linear-gradient(
     90deg,
     rgba(58, 150, 208, 1) 0%,
@@ -26,7 +28,7 @@ export const Shadow = styled.div`
   right: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   background-position: center;
