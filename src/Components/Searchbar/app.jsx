@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { fetchedWeather } from "../../Redux/slices/weatherSlices";
 import { Form, Input, Button } from "./styles";
 
-const App = ({ cityName, setCityName, setRegion }) => {
+const App = ({ cityName, setCityName }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,7 +14,6 @@ const App = ({ cityName, setCityName, setRegion }) => {
       onSubmit={(e) => {
         e.preventDefault();
         dispatch(fetchedWeather(cityName));
-        setRegion(cityName);
       }}
     >
       <Input
